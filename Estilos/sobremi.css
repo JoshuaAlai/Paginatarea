@@ -1,0 +1,154 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, sans-serif;
+    background-color: #ff4c4c;
+    background-image: linear-gradient(rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.8)), url("../SITIO WEB-PERSONAL/imagen/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: rgb(255, 255, 255);
+    line-height: 1.6;
+}
+
+.contenedor-bio {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+
+.cabecera-bio {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cabecera-bio h1 {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.cabecera-bio p {
+    color: #faf8f8; 
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.linea-roja {
+    border: none;
+    border-top: 4px solid #d32f2f; 
+    width: 100%;
+    margin: 0 auto 3rem auto;
+}
+
+.contenido-columnas {
+    display: flex;
+    align-items: center; 
+    gap: 3rem;           
+    margin-bottom: 3rem;
+}
+
+
+.columna-imagen {
+    flex: 0 0 40%;
+}
+
+.columna-imagen img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(100%); 
+}
+
+
+.columna-texto {
+    flex: 1;
+}
+
+.columna-texto p {
+    color: #f0eded; 
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    text-align: justify; 
+    line-height: 1.8;
+}
+
+
+.contenedor-boton {
+    text-align: center;
+}
+
+.btn-contacto {
+    display: inline-block;
+    background-color: #000000; 
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 35px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn-contacto:hover {
+    background-color: #333333;
+}
+
+
+@media (max-width: 768px) {
+   
+    .contenido-columnas {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .columna-imagen {
+        width: 80%; 
+        margin: 0 auto;
+    }
+
+    .cabecera-bio h1 {
+        font-size: 1.8rem;
+    }
+}
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #0f0f13c4; 
+    color: #a0a0a0; 
+    margin-top: 3rem;
+}
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+    margin: 17px 0;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table,th,td {
+    border: 1px solid var(--Color-Borde);
+}
+
+th {
+    background-color: var(--Color-Secundario);
+    color: #c52a2a;
+    font-weight: 600;
+}
+
+th,td {
+    padding: 12px;
+    text-align: left;
+}
+

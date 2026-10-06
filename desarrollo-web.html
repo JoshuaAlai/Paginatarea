@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web | Mi Portafolio</title>
+    <link rel="stylesheet" href="Estilos/desarrollo-web.css">
+</head>
+<body>
+
+  
+    <header class="navbar">
+        <div class="logo">Mi<span> Pagina web</span></div>
+        <nav class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="sobremi.html">Sobre mí</a>
+            <a href="desarrollo-web.html">Desarrollo Web</a>
+            <a href="Modelado3d.html">Modelado 3D</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="contenedor-principal">
+        <h1 class="titulo-pagina">DESARROLLO WEB</h1>
+
+        <section class="seccion-info">
+            <img src="SITIO WEB-PERSONAL/imagen/web.jpg" alt="Desarrollo Web" class="imagen-seccion">
+            <div class="texto-seccion">
+                <h2>Mis Habilidades en Web</h2>
+                <ol>
+                    <li>
+                        <b>Maquetación y Diseño:</b>
+                        <p>Utilizo HTML5 y CSS3 para construir interfaces modernas. Aplico diseño responsivo (Flexbox y Grid) para que las páginas se adapten perfectamente a celulares, tablets y monitores.</p>
+                    </li>
+                    <li>
+                        <b>Programación Lógica:</b>
+                        <p>Tengo conocimientos en JavaScript para darle interactividad a la web, y en desarrollo orientado a objetos utilizando Java, integrando conexiones con bases de datos MySQL.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        
+        <section class="seccion-cotizador">
+            <h2>Cotizador de Servicios Web</h2>
+            <p>Selecciona el tipo de servicio, las horas estimadas de trabajo y el nivel de prioridad para calcular el presupuesto total.</p>
+
+            <table class="tabla-cotizador">
+                <tr>
+                    <th>Tipo de Servicio Web:</th>
+                    <td>
+                        <select id="cboServicio">
+                            <option value="40"> HTML/CSS (S/ 40.00 / hora)</option>
+                            <option value="50">Programación JavaScript (S/ 50.00 / hora)</option>
+                            <option value="60">Desarrollo Backend Java (S/ 60.00 / hora)</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Cantidad de Horas:</th>
+                    <td>
+                        <input type="number" id="txtHoras" value="1" min="1">
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Prioridad de Entrega:</th>
+                    <td>
+                        <input type="radio" id="rbNormal" name="rbTurno" value="0" checked>
+                        <label for="rbNormal">Tiempo Normal (+S/ 0)</label><br>
+                        
+                        <input type="radio" id="rbUrgente" name="rbTurno" value="20">
+                        <label for="rbUrgente">Urgencia / Prioridad Alta (+S/ 20.00 / hora)</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" style="text-align: center; padding-top: 15px;">
+                        <input type="button" value="Calcular Presupuesto" onclick="calcularPresupuesto()" class="btn-formulario">
+                        <input type="button" value="Limpiar" onclick="limpiarCotizador()" class="btn-formulario btn-limpiar">
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Subtotal:</th>
+                    <td>
+                        <input type="text" id="txtSubtotal" readonly class="input-readonly">
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Descuento:</th>
+                    <td>
+                        <input type="text" id="txtDescuento" readonly class="input-readonly">
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Total a Pagar (S/):</th>
+                    <td>
+                        <input type="text" id="txtTotal" readonly class="input-total">
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 - Josue Avendaño - Todos los derechos reservados.</p>
+    </footer>
+
+    
+    <script src="Alquiler.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+
+:root {
+    --bg-rojo-base: #ff4c4c;
+    --overlay-oscuro: rgba(18, 18, 18, 0.85);
+    --bg-navbar: #0f0f13c4;
+    --bg-caja: rgba(54, 53, 53, 0.85);
+    --color-acento: #ff6b6b;
+    --color-neon: #deff4c;
+    
+    --texto-blanco: #ffffff;
+    --texto-oscuro: #111111;
+    --texto-gris: #cccccc;
+    
+    --fuente-base: Arial, 'Segoe UI', sans-serif;
+    --radio-borde: 8px;
+}
+
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--fuente-base);
+    background-color: var(--bg-rojo-base);
+    background-image: linear-gradient(var(--overlay-oscuro), var(--overlay-oscuro)), url("../SITIO WEB-PERSONAL/imagen/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--texto-blanco);
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.2rem 4%; background-color: var(--bg-navbar); 
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.5); position: sticky; top: 0; z-index: 100;
+}
+.logo { font-size: 1.8rem; font-weight: 700; }
+.logo span { color: var(--color-acento); }
+.menu a { color: whitesmoke; text-decoration: none; margin-left: 2rem; font-weight: 500; transition: color 0.3s ease; }
+.menu a:hover { color: var(--color-neon); }
+
+
+.contenedor-principal {
+    width: 90%; max-width: 1200px; margin: 0 auto; padding: 2rem 0;
+}
+
+.titulo-pagina {
+    background-color: rgba(255, 76, 76, 0.75); padding: 14px 20px;       
+    text-align: center; font-size: 2.2rem; border-radius: var(--radio-borde);
+    margin-bottom: 2.5rem; letter-spacing: 2px;
+}
+
+
+.seccion-info {
+    display: flex; gap: 2rem; background-color: var(--bg-caja);
+    padding: 2rem; border-radius: var(--radio-borde); margin-bottom: 3rem;
+    align-items: center;
+}
+.imagen-seccion {
+    flex: 1; width: 100%; max-width: 400px; border-radius: var(--radio-borde);
+    object-fit: cover;
+}
+.texto-seccion { flex: 2; }
+.texto-seccion h2 { color: var(--color-acento); margin-bottom: 1rem; }
+.texto-seccion li { margin-bottom: 1rem; margin-left: 1.5rem; }
+.texto-seccion p { color: var(--texto-gris); }
+
+
+.seccion-cotizador {
+    background-color: var(--bg-caja); padding: 2rem; 
+    border-radius: var(--radio-borde); box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+.seccion-cotizador h2 { color: var(--color-acento); text-align: center; margin-bottom: 10px; }
+.seccion-cotizador > p { text-align: center; margin-bottom: 20px; color: var(--texto-gris); }
+
+.tabla-cotizador {
+    width: 100%; max-width: 600px; margin: 0 auto; border-collapse: collapse;
+}
+
+.tabla-cotizador th, .tabla-cotizador td {
+    padding: 12px; text-align: left; vertical-align: middle;
+}
+
+.tabla-cotizador th {
+    width: 45%; font-weight: bold; color: var(--texto-blanco);
+}
+
+
+.tabla-cotizador select, 
+.tabla-cotizador input[type="number"], 
+.tabla-cotizador input[type="text"] {
+    width: 100%; padding: 8px 10px; border-radius: 4px;
+    border: 1px solid #ccc; font-family: var(--fuente-base);
+}
+
+.input-readonly { background-color: #e9ecef; color: #495057; outline: none; }
+.input-total { background-color: #d4edda; color: #155724; font-weight: bold; font-size: 1.1rem; outline: none; }
+
+.btn-formulario {
+    background-color: var(--color-acento); color: var(--texto-oscuro);
+    border: none; padding: 10px 20px; font-weight: bold; border-radius: 4px;
+    cursor: pointer; transition: 0.3s;
+}
+.btn-formulario:hover { background-color: var(--bg-rojo-base); }
+.btn-limpiar { background-color: #6c757d; color: white; margin-left: 10px; }
+.btn-limpiar:hover { background-color: #5a6268; }
+
+.footer { text-align: center; padding: 2rem; background-color: var(--bg-navbar); color: var(--texto-gris); margin-top: 3rem; }
+
+
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; padding: 1rem; }
+    .menu { margin-top: 1rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+    .menu a { margin-left: 0; }
+    
+    .seccion-info { flex-direction: column; }
+    
+    .tabla-cotizador th, .tabla-cotizador td { display: block; width: 100%; }
+    .tabla-cotizador th { padding-bottom: 5px; }
+    .tabla-cotizador td { padding-top: 0; margin-bottom: 10px; }
+}

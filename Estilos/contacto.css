@@ -1,0 +1,203 @@
+
+:root {
+    --color-fondo: #ff4c4c;
+    --color-overlay: rgba(18, 18, 18, 0.8);
+    --color-navbar: #0f0f13c4;
+    --color-acento: #ff6b6b;
+    --color-acento-hover: #ff4c4c;
+    --color-acento-neon: #deff4c;
+    
+    --color-texto-principal: #ffffff;
+    --color-texto-secundario: whitesmoke;
+    --color-texto-gris: #a0a0a0;
+    --color-texto-oscuro: #000000;
+    
+    --color-caja-form: #70747e;
+    --color-borde-input: #cccccc;
+    --color-boton: #000000;
+    --color-boton-hover: #1a426e;
+
+    --fuente-principal: 'Segoe UI', Roboto, Helvetica, sans-serif;
+    --radio-borde: 8px;
+    --radio-input: 4px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    background-image: linear-gradient(rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.8)), url("../SITIO WEB-PERSONAL/imagen/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--color-texto-principal);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: var(--color-navbar); 
+    box-shadow: var(--color-fondo) 0px 4px 6px -1px, var(--color-fondo) 0px 2px 4px -1px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--color-acento); 
+}
+
+.menu a {
+    color: var(--color-texto-secundario);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--color-acento-neon);
+}
+
+
+.contenedor-pedido {
+    width: 90%;
+    max-width: 500px; 
+    margin: 40px auto; 
+    flex: 1; 
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--color-acento-hover);
+    margin-bottom: 20px;
+}
+
+.caja-formulario {
+    background-color: var(--color-caja-form); 
+    padding: 30px;
+    border-radius: var(--radio-borde); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+}
+
+.titulo-formulario {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--color-texto-oscuro); 
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.grupo-input {
+    margin-bottom: 15px;
+}
+
+.grupo-input label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: var(--color-texto-oscuro);
+    margin-bottom: 6px;
+}
+
+.grupo-input input, 
+.grupo-input textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--color-borde-input);
+    border-radius: var(--radio-input);
+    box-sizing: border-box; 
+    font-family: var(--fuente-principal);
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.grupo-input input:focus,
+.grupo-input textarea:focus {
+    border-color: var(--color-acento);
+}
+
+.grupo-input textarea {
+    resize: vertical; 
+}
+
+.btn-enviar {
+    width: 100%;
+    background-color: var(--color-boton); 
+    color: var(--color-texto-principal);
+    border: none;
+    padding: 12px;
+    border-radius: var(--radio-input);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: var(--color-boton-hover);
+}
+
+
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--color-navbar); 
+    color: var(--color-texto-gris); 
+    margin-top: 3rem;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .menu {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .menu a {
+        margin-left: 0;
+    }
+
+    .contenedor-pedido {
+        margin: 25px auto;
+        padding: 0 10px;
+    }
+
+    .caja-formulario {
+        padding: 20px;
+    }
+
+    .titulo-principal {
+        font-size: 1.6rem;
+    }
+}
